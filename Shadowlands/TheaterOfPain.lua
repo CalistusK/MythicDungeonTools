@@ -46,6 +46,13 @@ MDT.mapPOIs[dungeonIndex] = {
             ["template"] = "MapLinkPinTemplate";
             ["direction"] = -1;
         };
+        [2] = {
+            ["y"] = -443.74558037599;
+            ["x"] = 426.04043608995;
+            ["template"] = "DeathReleasePinTemplate";
+            ["graveyardDescription"] = "";
+            ["type"] = "graveyard";
+        };
     };
     [2] = {
         [1] = {
@@ -183,6 +190,10 @@ MDT.dungeonEnemies[dungeonIndex] = {
         };
         ["id"] = 174197;
         ["health"] = 72090;
+        ["spells"] = {
+            [330784] = {};
+            [341902] = {};
+        };
         ["name"] = "Battlefield Ritualist";
         ["displayId"] = 98696;
         ["creatureType"] = "Humanoid";
@@ -207,6 +218,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 170838;
+        ["spells"] = {
+            [320679] = {};
+            [331510] = {};
+            [337178] = {};
+        };
         ["health"] = 92115;
         ["name"] = "Unyielding Contender";
         ["displayId"] = 95570;
@@ -220,15 +236,18 @@ MDT.dungeonEnemies[dungeonIndex] = {
             [1] = {
                 ["y"] = -360.09502773364;
                 ["x"] = 426.28482697188;
-                ["g"] = 1;
                 ["sublevel"] = 1;
             };
         };
         ["id"] = 170850;
+        ["spells"] = {
+            [333241] = {};
+        };
         ["health"] = 144180;
         ["name"] = "Raging Bloodhorn";
         ["displayId"] = 96471;
         ["creatureType"] = "Beast";
+        ["stealthDetect"] = true;
         ["level"] = 60;
         ["count"] = 7;
         ["scale"] = 1.4;
@@ -243,6 +262,12 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 164451;
+        ["spells"] = {
+            [324085] = {};
+            [326892] = {};
+            [320069] = {};
+            [320063] = {};
+        };
         ["isBoss"] = true;
         ["encounterID"] = 2397;
         ["instanceID"] = 1187;
@@ -264,6 +289,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 164463;
+        ["spells"] = {
+            [320248] = {};
+            [320180] = {};
+            [320120] = {};
+        };
         ["isBoss"] = true;
         ["encounterID"] = 2397;
         ["instanceID"] = 1187;
@@ -285,6 +315,13 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 164461;
+        ["spells"] = {
+            [320300] = {};
+            [320293] = {};
+            [333231] = {};
+            [320272] = {};
+            [320277] = {};
+        };
         ["isBoss"] = true;
         ["encounterID"] = 2397;
         ["instanceID"] = 1187;
@@ -306,6 +343,12 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 164464;
+        ["spells"] = {
+            [333552] = {};
+            [333540] = {};
+            [333523] = {};
+            [342048] = {};
+        };
         ["health"] = 96120;
         ["name"] = "Xira the Underhanded";
         ["displayId"] = 96440;
@@ -336,6 +379,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 164510;
+        ["spells"] = {
+            [330532] = {};
+            [327029] = {};
+            [319997] = {};
+        };
         ["health"] = 68085;
         ["name"] = "Shambling Arbalest";
         ["displayId"] = 96212;
@@ -373,6 +421,9 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 167994;
+        ["spells"] = {
+            [326835] = {};
+        };
         ["health"] = 80100;
         ["name"] = "Ossified Conscript";
         ["displayId"] = 96253;
@@ -390,6 +441,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 167538;
+        ["spells"] = {
+            [342139] = {};
+            [342125] = {};
+            [331316] = {};
+        };
         ["health"] = 256320;
         ["name"] = "Dokigg the Brutalizer";
         ["displayId"] = 97488;
@@ -407,6 +463,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 167536;
+        ["spells"] = {
+            [342139] = {};
+            [334023] = {};
+            [333861] = {};
+        };
         ["health"] = 256320;
         ["name"] = "Harugia the Bloodthirsty";
         ["displayId"] = 95969;
@@ -426,6 +487,12 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 164506;
+        ["spells"] = {
+            [330545] = {};
+            [330546] = {};
+            [330562] = {};
+            [330565] = {};
+        };
         ["health"] = 96120;
         ["name"] = "Ancient Captain";
         ["displayId"] = 96489;
@@ -443,6 +510,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 167533;
+        ["spells"] = {
+            [333861] = {};
+            [333827] = {};
+            [331275] = {};
+        };
         ["health"] = 256320;
         ["name"] = "Advent Nevermore";
         ["displayId"] = 95966;
@@ -460,6 +532,15 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 162329;
+        ["spells"] = {
+            [320114] = {};
+            [320644] = {};
+            [317231] = {};
+            [339415] = {};
+            [320729] = {};
+            [320050] = {};
+            [331618] = {};
+        };
         ["isBoss"] = true;
         ["encounterID"] = 2390;
         ["instanceID"] = 1187;
@@ -476,75 +557,63 @@ MDT.dungeonEnemies[dungeonIndex] = {
             [1] = {
                 ["y"] = -442.99206896552;
                 ["x"] = 607.15292675452;
-                ["g"] = 5;
                 ["sublevel"] = 3;
             };
             [2] = {
                 ["y"] = -447.21070094084;
                 ["x"] = 592.19400492044;
-                ["g"] = 5;
                 ["sublevel"] = 3;
             };
             [3] = {
                 ["y"] = -436.53318698247;
                 ["x"] = 597.21077116794;
-                ["g"] = 5;
                 ["sublevel"] = 3;
             };
             [4] = {
                 ["sublevel"] = 3;
                 ["inspiring"] = true;
                 ["x"] = 568.77036871258;
-                ["g"] = 6;
                 ["y"] = -446.99419148851;
             };
             [5] = {
                 ["y"] = -444.17811518964;
                 ["x"] = 557.01639299851;
-                ["g"] = 6;
                 ["sublevel"] = 3;
             };
             [6] = {
                 ["y"] = -429.63703232507;
                 ["x"] = 540.72369922713;
-                ["g"] = 7;
                 ["sublevel"] = 3;
             };
             [7] = {
                 ["y"] = -435.86740602643;
                 ["x"] = 558.08954594697;
-                ["g"] = 6;
                 ["sublevel"] = 3;
             };
             [8] = {
                 ["y"] = -421.56842984826;
                 ["x"] = 546.70176186807;
-                ["g"] = 7;
                 ["sublevel"] = 3;
             };
             [9] = {
                 ["y"] = -421.03779212449;
                 ["x"] = 535.99685365924;
-                ["g"] = 7;
                 ["sublevel"] = 3;
             };
             [10] = {
                 ["y"] = -392.05458967775;
                 ["x"] = 533.54837904435;
-                ["g"] = 8;
                 ["sublevel"] = 3;
             };
             [11] = {
                 ["sublevel"] = 3;
                 ["inspiring"] = true;
                 ["x"] = 539.45647000001;
-                ["g"] = 8;
                 ["y"] = -380.64675527127;
             };
             [12] = {
                 ["y"] = -392.57546897264;
                 ["x"] = 547.30003064664;
-                ["g"] = 8;
                 ["sublevel"] = 3;
             };
             [13] = {
@@ -621,6 +690,10 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 169875;
+        ["spells"] = {
+            [330810] = {};
+            [332550] = {};
+        };
         ["health"] = 48060;
         ["name"] = "Shackled Soul";
         ["displayId"] = 90428;
@@ -644,6 +717,12 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 167998;
+        ["spells"] = {
+            [330725] = {};
+            [330716] = {};
+            [326494] = {};
+            [326497] = {};
+        };
         ["health"] = 120150;
         ["name"] = "Portal Guardian";
         ["displayId"] = 96442;
@@ -729,6 +808,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 170882;
+        ["spells"] = {
+            [333293] = {};
+            [342675] = {};
+            [341771] = {};
+        };
         ["health"] = 40050;
         ["name"] = "Bone Magus";
         ["displayId"] = 97410;
@@ -778,6 +862,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 160495;
+        ["spells"] = {
+            [330784] = {};
+            [330868] = {};
+            [333708] = {};
+        };
         ["health"] = 72090;
         ["name"] = "Maniacal Soulbinder";
         ["displayId"] = 95233;
@@ -796,6 +885,10 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 162763;
+        ["spells"] = {
+            [331237] = {};
+            [331223] = {};
+        };
         ["health"] = 160200;
         ["name"] = "Soulforged Bonereaver";
         ["displayId"] = 94812;
@@ -826,6 +919,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 169893;
+        ["spells"] = {
+            [333299] = {};
+            [333294] = {};
+            [330875] = {};
+        };
         ["health"] = 112140;
         ["name"] = "Nefarious Darkspeaker";
         ["displayId"] = 97011;
@@ -843,6 +941,17 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 162309;
+        ["spells"] = {
+            [322087] = {};
+            [319521] = {};
+            [319531] = {};
+            [319567] = {};
+            [342691] = {};
+            [319626] = {};
+            [333567] = {};
+            [319539] = {};
+            [319669] = {};
+        };
         ["isBoss"] = true;
         ["encounterID"] = 2389;
         ["instanceID"] = 1187;
@@ -895,6 +1004,13 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 174210;
+        ["spells"] = {
+            [330700] = {};
+            [330703] = {};
+            [330693] = {};
+            [330694] = {};
+            [341969] = {};
+        };
         ["health"] = 64080;
         ["name"] = "Blighted Sludge-Spewer";
         ["displayId"] = 95559;
@@ -998,6 +1114,10 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 163089;
+        ["spells"] = {
+            [330693] = {};
+            [330694] = {};
+        };
         ["health"] = 20025;
         ["name"] = "Disgusting Refuse";
         ["displayId"] = 94761;
@@ -1028,6 +1148,12 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 170690;
+        ["spells"] = {
+            [330700] = {};
+            [330697] = {};
+            [319290] = {};
+            [341977] = {};
+        };
         ["health"] = 80100;
         ["name"] = "Diseased Horror";
         ["displayId"] = 97117;
@@ -1097,6 +1223,10 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 169927;
+        ["spells"] = {
+            [332836] = {};
+            [330586] = {};
+        };
         ["health"] = 96120;
         ["name"] = "Putrid Butcher";
         ["displayId"] = 97116;
@@ -1208,6 +1338,12 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 163086;
+        ["spells"] = {
+            [345245] = {};
+            [330592] = {};
+            [330608] = {};
+            [330614] = {};
+        };
         ["health"] = 152190;
         ["name"] = "Rancid Gasbag";
         ["displayId"] = 97161;
@@ -1225,6 +1361,10 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 162317;
+        ["spells"] = {
+            [323515] = {};
+            [318406] = {};
+        };
         ["isBoss"] = true;
         ["encounterID"] = 2401;
         ["instanceID"] = 1187;
@@ -1245,6 +1385,13 @@ MDT.dungeonEnemies[dungeonIndex] = {
             };
         };
         ["id"] = 165946;
+        ["spells"] = {
+            [323608] = {};
+            [339573] = {};
+            [323683] = {};
+            [324449] = {};
+            [324079] = {};
+        };
         ["isBoss"] = true;
         ["encounterID"] = 2417;
         ["instanceID"] = 1187;
@@ -1271,6 +1418,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
         ["creatureType"] = "Humanoid";
         ["level"] = 61;
         ["id"] = 162744;
+        ["spells"] = {
+            [342135] = {};
+            [336996] = {};
+            [317605] = {};
+        };
         ["health"] = 256320;
     };
     [30] = {
@@ -1288,6 +1440,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
         ["creatureType"] = "Humanoid";
         ["level"] = 61;
         ["id"] = 167532;
+        ["spells"] = {
+            [331288] = {};
+            [332708] = {};
+            [342135] = {};
+        };
         ["health"] = 256320;
     };
     [31] = {
@@ -1305,6 +1462,11 @@ MDT.dungeonEnemies[dungeonIndex] = {
         ["creatureType"] = "Humanoid";
         ["level"] = 61;
         ["id"] = 167534;
+        ["spells"] = {
+            [333839] = {};
+            [333845] = {};
+            [317605] = {};
+        };
         ["health"] = 256320;
     };
 };

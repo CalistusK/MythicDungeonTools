@@ -34,6 +34,13 @@ MDT.mapPOIs[dungeonIndex] = {
             ["template"] = "MapLinkPinTemplate";
             ["direction"] = 1;
         };
+        [2] = {
+            ["y"] = -345.89731299095;
+            ["x"] = 361.09898097497;
+            ["template"] = "DeathReleasePinTemplate";
+            ["graveyardDescription"] = "";
+            ["type"] = "graveyard";
+        };
     };
     [2] = {
         [1] = {
@@ -53,6 +60,20 @@ MDT.mapPOIs[dungeonIndex] = {
             ["type"] = "mapLink";
             ["template"] = "MapLinkPinTemplate";
             ["direction"] = 1;
+        };
+        [3] = {
+            ["y"] = -122.83103530167;
+            ["x"] = 301.64700510522;
+            ["template"] = "MapLinkPinTemplate";
+            ["text"] = "Kyrian Spear";
+            ["type"] = "generalNote";
+        };
+        [4] = {
+            ["y"] = -493.87894840153;
+            ["x"] = 490.09515745679;
+            ["template"] = "MapLinkPinTemplate";
+            ["text"] = "Kyrian Spear";
+            ["type"] = "generalNote";
         };
     };
     [3] = {
@@ -74,6 +95,13 @@ MDT.mapPOIs[dungeonIndex] = {
             ["template"] = "MapLinkPinTemplate";
             ["direction"] = 1;
         };
+        [3] = {
+            ["y"] = -430.33840567777;
+            ["x"] = 350.09270202038;
+            ["template"] = "MapLinkPinTemplate";
+            ["text"] = "Kyrian Spear";
+            ["type"] = "generalNote";
+        };
     };
     [4] = {
         [1] = {
@@ -86,7 +114,7 @@ MDT.mapPOIs[dungeonIndex] = {
             ["direction"] = -1;
         };
     };
-};
+ }; 
 MDT.dungeonEnemies[dungeonIndex] = {
     [1] = {
         ["clones"] = {
