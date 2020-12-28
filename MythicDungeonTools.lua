@@ -221,10 +221,10 @@ local affixWeeks = {
     [1] =  {[1]=11,[2]=3,[3]=10,[4]=121}, -->>Bursting, Volcanic, Fortified
     [2] = {[1]=7,[2]=124,[3]=9,[4]=121}, -->>Bolstering, Storming, Tyrannical
     [3] = {[1]=123,[2]=12,[3]=10,[4]=121}, -->>Spiteful, Grievous, Fortified
-    [4] =  {[1]=0,[2]=0,[3]=0,[4]=0},
-    [5] =  {[1]=0,[2]=0,[3]=0,[4]=0},
-    [6] =  {[1]=0,[2]=0,[3]=0,[4]=0},
-    [7] =  {[1]=0,[2]=0,[3]=0,[4]=0},
+    [4] =  {[1]=122,[2]=4,[3]=9,[4]=121}, -->>Inspiring, Necrotic, Tyrannical
+    [5] =  {[1]=8,[2]=14,[3]=10,[4]=121}, -->>Sanguine, Quaking, Fortified
+    [6] =  {[1]=6,[2]=13,[3]=9,[4]=121}, -->>Raging, Explosive, Tyrannical
+    [7] =  {[1]=123,[2]=3,[3]=10,[4]=121}, -->>Spiteful, Volcanic, Fortified
     [8] =  {[1]=7,[2]=4,[3]=9,[4]=121},  -->>Bolstering, Necrotic, Tyrannical
     [9] =  {[1]=124,[2]=122,[3]=10,[4]=121},   -->>Storming, Inspiring, Fortified
     [10] = {[1]=11,[2]=13,[3]=9,[4]=121},  -->>Bursting, Explosive, Tyrannical
@@ -2989,42 +2989,69 @@ function MDT:DeletePreset(index)
 end
 
 MDT.zoneIdToDungeonIdx = {
-    [934] = 15,--atal
-    [935] = 15,--atal
-    [936] = 16,--fh
-    [1004] = 17,--kr
-    [1039] = 18,--shrine
-    [1040] = 18,--shrine
-    [1162] = 19,--siege
-    [1038] = 20,--temple
-    [1043] = 20,--temple
-    [1010] = 21,--motherlode
-    [1041] = 22,--underrot
-    [1042] = 22,--underrot
-    [974] = 23,--toldagor
-    [975] = 23,--toldagor
-    [976] = 23,--toldagor
-    [977] = 23,--toldagor
-    [978] = 23,--toldagor
-    [979] = 23,--toldagor
-    [980] = 23,--toldagor
-    [1015] = 24,--wcm
-    [1016] = 24,--wcm
-    [1017] = 24,--wcm
-    [1018] = 24,--wcm
-    [1029] = 24,--wcm
-    [1490] = 25,--lower mecha
-    [1491] = 26,--upper mecha
-    [1493] = 26,--upper mecha
-    [1494] = 26,--upper mecha
-    [1497] = 26,--upper mecha
+    [934] = {[1]=15,[2]=1}, --atal
+    [935] = {[1]=15,[2]=2}, --atal
+    [936] = {[1]=16,[2]=1}, --fh
+    [1004] = {[1]=17,[2]=1}, --kr
+    [1039] = {[1]=18,[2]=1}, --shrine
+    [1040] = {[1]=18,[2]=1}, --shrine
+    [1162] = {[1]=19,[2]=1}, --siege
+    [1038] = {[1]=20,[2]=1}, --temple
+    [1043] = {[1]=20,[2]=1}, --temple
+    [1010] = {[1]=21,[2]=1}, --motherlode
+    [1041] = {[1]=22,[2]=1}, --underrot
+    [1042] = {[1]=22,[2]=1}, --underrot
+    [974] = {[1]=23,[2]=1}, --toldagor
+    [975] = {[1]=23,[2]=1}, --toldagor
+    [976] = {[1]=23,[2]=1}, --toldagor
+    [977] = {[1]=23,[2]=1}, --toldagor
+    [978] = {[1]=23,[2]=1}, --toldagor
+    [979] = {[1]=23,[2]=1}, --toldagor
+    [980] = {[1]=23,[2]=1}, --toldagor
+    [1015] = {[1]=24,[2]=1}, --wcm
+    [1016] = {[1]=24,[2]=1}, --wcm
+    [1017] = {[1]=24,[2]=1}, --wcm
+    [1018] = {[1]=24,[2]=1}, --wcm
+    [1029] = {[1]=24,[2]=1}, --wcm
+    [1490] = {[1]=25,[2]=1}, --lower mecha
+    [1491] = {[1]=26,[2]=1}, --upper mecha
+    [1493] = {[1]=26,[2]=1}, --upper mecha
+    [1494] = {[1]=26,[2]=1}, --upper mecha
+    [1497] = {[1]=26,[2]=1}, --upper mecha
+    [1677] = {[1]=29,[2]=4}, -- de other side ardenweald
+    [1678] = {[1]=29,[2]=2}, -- de other side mechagon
+    [1679] = {[1]=29,[2]=3}, -- de other side zul'gurub
+    [1680] = {[1]=29,[2]=1}, -- de other side
+    [1663] = {[1]=30,[2]=1}, -- halls of atonement
+    [1664] = {[1]=30,[2]=2}, -- halls of atonement nave of pain
+    [1665] = {[1]=30,[2]=3}, -- halls of atonement sanctuary of souls
+    [1669] = {[1]=31,[2]=1}, -- mists of tirna scithe
+    [1674] = {[1]=32,[2]=1}, -- plaguefall
+    [1697] = {[1]=32,[2]=2}, -- plaguefall festering sanctum
+    [1675] = {[1]=33,[2]=1}, -- sanguine depths depths of despair
+    [1676] = {[1]=33,[2]=2}, -- sanguine depths amphitheater of sorrow
+    [1692] = {[1]=34,[2]=1}, -- spires of ascension honors ascent
+    [1693] = {[1]=34,[2]=2}, -- spires of ascension gardens of repose
+    [1694] = {[1]=34,[2]=3}, -- spires of ascension font of fealty
+    [1695] = {[1]=34,[2]=4}, -- spires of ascension seat of the archon
+    [1666] = {[1]=35,[2]=1}, -- necrotic wake
+    [1667] = {[1]=35,[2]=2}, -- necrotic wake stitchwerks
+    [1668] = {[1]=35,[2]=3}, -- necrotic wake zolramus
+    [1683] = {[1]=36,[2]=1}, -- theater of pain
+    [1684] = {[1]=36,[2]=2}, -- theater of pain chambers of conquest
+    [1685] = {[1]=36,[2]=3}, -- theater of pain altars of agony
+    [1686] = {[1]=36,[2]=4}, -- theater of pain upper barrow of carnage
+    [1687] = {[1]=36,[2]=5} -- theater of pain lower barrow of carnage
 }
 local lastUpdatedDungeonIdx
 function MDT:CheckCurrentZone(init)
     local zoneId = C_Map.GetBestMapForUnit("player")
-    local dungeonIdx = MDT.zoneIdToDungeonIdx[zoneId]
-    if dungeonIdx and (not lastUpdatedDungeonIdx or  dungeonIdx ~= lastUpdatedDungeonIdx) then
+    local dungeonIdx = MDT.zoneIdToDungeonIdx[zoneId][1]
+    local dungeonSubLvl = MDT.zoneIdToDungeonIdx[zoneId][2]
+    if dungeonIdx and (not lastUpdatedDungeonIdx or dungeonIdx ~= lastUpdatedDungeonIdx) or
+    db.presets[db.currentDungeonIdx][db.currentPreset[db.currentDungeonIdx]].value.currentSublevel ~= dungeonSubLvl then
         lastUpdatedDungeonIdx = dungeonIdx
+        db.presets[db.currentDungeonIdx][db.currentPreset[db.currentDungeonIdx]].value.currentSublevel = dungeonSubLvl
         MDT:UpdateToDungeon(dungeonIdx,nil,init)
     end
 end
