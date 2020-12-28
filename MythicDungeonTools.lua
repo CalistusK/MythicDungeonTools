@@ -3046,11 +3046,11 @@ MDT.zoneIdToDungeonIdx = {
 local lastUpdatedDungeonIdx
 function MDT:CheckCurrentZone(init)
     local zoneId = C_Map.GetBestMapForUnit("player")
-    local dungeonIdx = MDT.zoneIdToDungeonIdx[zoneId][1]
-    local dungeonSubLvl = MDT.zoneIdToDungeonIdx[zoneId][2]
-    if dungeonIdx and (not lastUpdatedDungeonIdx or dungeonIdx ~= lastUpdatedDungeonIdx) or
-    db.presets[db.currentDungeonIdx][db.currentPreset[db.currentDungeonIdx]].value.currentSublevel ~= dungeonSubLvl then
-        lastUpdatedDungeonIdx = dungeonIdx
+    local dungeonIdx = MDT.zoneIdToDungeonIdx[zoneId]
+    if dungeonIdx and ((not lastUpdatedDungeonIdx or dungeonIdx ~= lastUpdatedDungeonIdx) or
+    db.presets[db.currentDungeonIdx][db.currentPreset[db.currentDungeonIdx]].value.currentSublevel ~= dungeonSubLvl) then
+        lastUpdatedDungeonIdx = dungeonIdx[1]
+        dungeonSubLvl = MDT.zoneIdToDungeonIdx[zoneId][2]
         db.presets[db.currentDungeonIdx][db.currentPreset[db.currentDungeonIdx]].value.currentSublevel = dungeonSubLvl
         MDT:UpdateToDungeon(dungeonIdx,nil,init)
     end
