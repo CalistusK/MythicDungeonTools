@@ -3052,7 +3052,7 @@ function MDT:CheckCurrentZone(init)
         lastUpdatedDungeonIdx = dungeonIdx[1]
         dungeonSubLvl = MDT.zoneIdToDungeonIdx[zoneId][2]
         db.presets[db.currentDungeonIdx][db.currentPreset[db.currentDungeonIdx]].value.currentSublevel = dungeonSubLvl
-        MDT:UpdateToDungeon(dungeonIdx,nil,init)
+        MDT:UpdateToDungeon(dungeonIdx[1],nil,init)
     end
 end
 
